@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE AMO KKS💖</title>
+    <style>
+        /* Fondo */
+        body {
+            background: url('campo_flores.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: rgb(243, 241, 243);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Animación de aparición */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Texto */
+        h1 {
+            font-size: 3rem;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            animation: slideIn 2.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Botón de música */
+        button {
+            padding: 12px 25px;
+            font-size: 1.3rem;
+            background: rgba(226, 12, 190, 0.8);
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        button:hover {
+            background: rgba(68, 36, 212, 0.9);
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Imagen de la pareja */
+        .pareja {
+            position: absolute;
+            bottom: 30px;
+            width: 300px;
+            animation: float 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+
+        /* Corazones y flores dispersas */
+        .decoracion {
+            position: absolute;
+            width: 80px;
+            animation: flotar 6s infinite alternate ease-in-out;
+        }
+
+        /* Ubicación de imágenes dispersas */
+        .flor1 { top: 10%; left: 5%; }
+        .flor2 { top: 50%; left: 80%; }
+        .flor3 { top: 65%; left: 25%; }
+        .corazon1 { top: 15%; left: 70%; }
+        .corazon2 { top: 60%; left: 10%; }
+        .emoji1 { top: 30%; left: 50%; width: 60px; }
+
+        @keyframes flotar {
+            from { transform: translateY(0) rotate(0deg); }
+            to { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Corazones animados flotando */
+        .emoji-corazon {
+            position: absolute;
+            font-size: 2rem;
+            animation: subir 7s infinite alternate ease-in-out;
+        }
+
+        .corazon-emoji1 { top: 30%; left: 40%; animation-duration: 4s; }
+        .corazon-emoji2 { top: 70%; left: 60%; animation-duration: 6s; }
+        .corazon-emoji3 { top: 50%; left: 20%; animation-duration: 5s; }
+
+        @keyframes subir {
+            from { transform: translateY(0); }
+            to { transform: translateY(-30px) rotate(10deg); }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>💖Mi bicho Tragon y no Embarazado💖</h1>
+    <p>💖Te amo 6 Millones💖 .</p>
+
+    <!-- Botón para reproducir música -->
+    <audio id="miMusica">
+        <source src="ojitos_lindos.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    <h1>💖Feliz San Valentín mi niña💖</h1>
+    <p>💖Mi doña 🌹Berrinches💖</p>
+    <h2 class="texto">🌹eres mi rayo de luz en esta obscuridad🌹</h3>
+    <p class="texto">💞If the world were mine, I would give it all to you...💞</p>
+    <button onclick="toggleMusic()">🎶 Reproducir Música</button>
+
+
+
+    <!-- Imágenes decorativas -->
+    <img src="flor1.jpeg" alt="Flor" class="decoracion flor1">
+    <img src="flor2.jpeg" alt="Flor" class="decoracion flor2">
+    <img src="flor3.jpeg" alt="Flor" class="decoracion flor3">
+    <img src="corazon1.jpeg" alt="Corazón" class="decoracion corazon1">
+    <img src="corazon2.jpeg" alt="Corazón" class="decoracion corazon2">
+    <img src="emoji_corazon.jpeg" alt="Emoji corazón" class="decoracion emoji1">
+
+    <!-- Corazones emoji flotando -->
+    <span class="emoji-corazon corazon-emoji1">❤️</span>
+    <span class="emoji-corazon corazon-emoji1">💖</span>
+    <span class="emoji-corazon corazon-emoji1">💕</span>
+    <span class="emoji-corazon corazon-emoji2">💕</span>
+    <span class="emoji-corazon corazon-emoji3">💕</span>
+    <span class="emoji-corazon corazon-emoji4">💕</span>
+    <span class="emoji-corazon corazon-emoji2">💖</span> 
+    <span class="emoji-corazon corazon-emoji3">💖</span>
+    <span class="emoji-corazon corazon-emoji2">❤️</span>
+    <span class="emoji-corazon corazon-emoji3">❤️</span>
+    <span class="emoji-corazon corazon-emoji4">❤️</span>
+    <span class="emoji-corazon corazon-emoji5">💕</span>
+    <span class="emoji-corazon corazon-emoji6">💕</span>
+    <span class="emoji-corazon corazon-emoji7">💕</span>
+    <span class="emoji-corazon corazon-emoji8">💕</span>
+    <span class="emoji-corazon corazon-emoji1">❤️</span>
+
+    <script>  
+        let isPlaying = false;
+        const music = document.getElementById('miMusica');
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+            } else {
+                music.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
+</body>
+</html>
